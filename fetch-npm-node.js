@@ -5,6 +5,7 @@ module.exports = function(url, options) {
 	if (/^\/\//.test(url)) {
 		url = 'https:' + url;
 	}
+	delete options.mode;
 	return realFetch.call(this, url, options);
 };
 
